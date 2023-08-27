@@ -19,6 +19,12 @@ function sumArray(arr) {
   }
 }
 
+
+//arr.slice(1) happens first and essentially goes thru length of array such that first loop --> goes from [1,2,3] to [2,3] then next loop is from [2,3] to just [3] then from [3] to []
+//THEN you start with [3] (bc 3 is at top of your stack rn) and that is your current arr[0], next 2 comes back in to arr and is your new arr[0] and is added to previous arr[0] which was 3
+//THEN same happens when you get back to 1 (which was at the bottom of your stack) --> now have [1,2,3] again and 1 (your new arr[0]) is added to your previous two arr[0]'s (2 and 3)
+
+
 // Examples:
 
 console.log(sumArray([1, 2, 3])); //  6

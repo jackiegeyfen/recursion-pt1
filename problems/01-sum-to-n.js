@@ -11,15 +11,33 @@ sumToN(9)  // returns 45
 sumToN(-8)  // returns null
 ***********************************************************************/
 
+// function sumToN(n) {
+//   if (n < 0) {
+//     return null;
+//   }
+//   else if (n === 0) {
+//     return 0;
+//   }
+//   else {
+//     return sumToN(n - 1) + n;
+//   }
+// }
+
+//base case - if number < 0 return null
+
+// recursive case - if number > 0, add to total
+
+//recursive step- n-1
+
 function sumToN(n) {
   if (n < 0) {
     return null;
   }
-  else if (n === 0) {
-    return 0;
+  if (n === 0){
+    return n;
   }
-  else {
-    return sumToN(n - 1) + n;
+  if (n >= 1){
+    return n + sumToN(n-1);
   }
 }
 
